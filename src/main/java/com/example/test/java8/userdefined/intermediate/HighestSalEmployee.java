@@ -18,6 +18,9 @@ public class HighestSalEmployee {
                 new Employee("John", 14000, 1, "Bng", "IT"));
 
         Employee e1 = list.stream().max(Comparator.comparing(Employee::getSalary)).get();
+        System.out.println("-----------");
+        list.stream().sorted(Comparator.comparingDouble(Employee::getSalary).reversed()).findFirst().ifPresent(System.out::println);
+        System.out.println("----------------");
         System.out.println(e1);
         System.out.println();
 

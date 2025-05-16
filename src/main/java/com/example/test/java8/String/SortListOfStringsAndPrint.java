@@ -43,7 +43,9 @@ public class SortListOfStringsAndPrint {
         System.out.println("reverse--"+list.stream().map(str -> new StringBuffer(str).reverse()).toList());
 
         IntStream.range(0, list.size()).mapToObj(i -> list.get(list.size()-1-i)).forEach(System.out::println);
-
-
+        Map<Boolean, List<Integer>> resList = intList.stream().collect(Collectors.partitioningBy(num-> num %2 ==0));
+        System.out.println("--------------------------");
+        System.out.println(resList.get(true));
+        System.out.println(resList.get(false));
     }
 }

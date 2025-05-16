@@ -1,8 +1,7 @@
 package com.example.test.leetcode.easy;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
+import java.util.stream.Collectors;
 
 public class MoveZerosUsingList {
 
@@ -19,6 +18,8 @@ public class MoveZerosUsingList {
         }
         return numList;
     }
+
+
 
     public static void main(String[] args) {
         List<Integer> numList = new ArrayList<>(Arrays.asList(0, 1, 0, 3, 12));
@@ -53,6 +54,5 @@ public class MoveZerosUsingList {
             index++;
         }
         System.out.println("arr->"+Arrays.toString(arr));
-
     }
 }
