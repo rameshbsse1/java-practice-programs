@@ -23,12 +23,6 @@ public class StringStarAppend {
             }
         }
         System.out.println(sb);
-
-
-        String s = "Hexaware Tech Hexaware Tech Hexaware Tech";
-        String[] arr = s.split(" ");
-        Arrays.stream(arr).collect(Collectors.groupingBy(word-> word, Collectors.counting())).forEach((k,v) -> System.out.println(k+" "+v));
-
     }
 
 

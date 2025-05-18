@@ -2,9 +2,9 @@ package com.example.test.leetcode.easy;
 
 import java.util.Arrays;
 
-public class MoveZeros {
+public class MoveZerosToEnd {
 
-    public static void moveZeros(int[] nums) {
+    public static void moveZerosToEnd(int[] nums) {
         int nonZeroIndex = 0;
 
         for(int i=0; i<nums.length; i++) {
@@ -25,6 +25,6 @@ public class MoveZeros {
 
     public static void main(String[] args) {
         int[] nums1 = {0, 1, 0, 3, 12};
-        moveZeros(nums1);
+        moveZerosToEnd(nums1);
     }
 }
