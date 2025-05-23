@@ -25,5 +25,6 @@ public class WordCount {
         List<String> list = List.of(str.split(" "));
         list.stream().collect(Collectors.groupingBy(word-> word, Collectors.counting())).entrySet().stream().filter(entry->entry.getValue()>1)
                 .forEach(entry-> System.out.println(entry.getKey()+" "+entry.getValue()));
+
     }
 }

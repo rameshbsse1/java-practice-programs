@@ -13,7 +13,7 @@ public class PrimeNumbers {
                         .allMatch(i -> n%i !=0))
                 .forEach(System.out::println);
         String str = "I am an indian";
-        char firstNnRepeateChar = str.toLowerCase().chars().filter(c -> c!=' ').mapToObj(c-> (char) c)
+        char firstNnRepeateChar = str.toLowerCase().chars().mapToObj(c-> (char) c)
                 .collect(Collectors.groupingBy(Function.identity(), LinkedHashMap::new, Collectors.counting()))
                 .entrySet()
                 .stream()
