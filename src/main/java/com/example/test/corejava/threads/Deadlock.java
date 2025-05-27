@@ -15,7 +15,7 @@ public class Deadlock {
 
                 }
                 synchronized(lock2) {
-                    System.out.println("thrd1 holding lock1");
+                    System.out.println("thrd1 holding acquiring lock2");
                 }
             }
         });
@@ -28,7 +28,7 @@ public class Deadlock {
                 } catch (InterruptedException e) {
                 }
                 synchronized(lock1) {
-                    System.out.println("thread2 holding lock2");
+                    System.out.println("thread2 acquiring lock1");
                 }
             }
         });

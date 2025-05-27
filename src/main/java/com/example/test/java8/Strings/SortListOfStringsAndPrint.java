@@ -1,9 +1,8 @@
-package com.example.test.java8.String;
+package com.example.test.java8.Strings;
 
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
-import java.util.Optional;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
@@ -31,21 +30,5 @@ public class SortListOfStringsAndPrint {
         list.stream().collect(Collectors.partitioningBy(pred)).forEach((key, value) ->{
             System.out.println(key+" "+value);
         });
-
-        List<Integer> intList = Arrays.asList(1,2,3,4,5,6,7,8,9,10);
-        Predicate<Integer> intPred = num -> num%2==0;
-        Map<Boolean, List<Integer>> map = intList.stream().collect(Collectors.partitioningBy(intPred));
-        List<Integer> evenList = map.get(true);
-        List<Integer> oddList = map.get(false);
-        System.out.println("Even :"+evenList);
-        System.out.println("Odd: "+oddList);
-
-        System.out.println("reverse--"+list.stream().map(str -> new StringBuffer(str).reverse()).toList());
-
-        IntStream.range(0, list.size()).mapToObj(i -> list.get(list.size()-1-i)).forEach(System.out::println);
-        Map<Boolean, List<Integer>> resList = intList.stream().collect(Collectors.partitioningBy(num-> num %2 ==0));
-        System.out.println("--------------------------");
-        System.out.println(resList.get(true));
-        System.out.println(resList.get(false));
     }
 }
